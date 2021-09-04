@@ -28,8 +28,16 @@ async function createUser({username, password}) {
     }
 }
 
+//Added from Part 2, uncomment once Part1 is complete
+// async function getAllTags() {
+//     const { rows } = await client.query(`
+//         SELECT * FROM tags;
+//     `)
+// }
+
 module.exports = {
   client,
   getAllUsers,
   createUser,
+//   getAllTags   //Added from Part2, uncomment once Part 1 is complete
 }
