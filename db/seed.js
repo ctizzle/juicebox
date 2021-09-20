@@ -13,7 +13,8 @@ const {
     getUserById,
     createTags,
     addTagsToPost,
-    getPostsByTagName 
+    getPostsByTagName,
+    getUserByUsername
 } = require('./index');
 
 

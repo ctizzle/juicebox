@@ -4,13 +4,14 @@ const server = express();
 const apiRouter = require('./api');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
-// const { client } = require('./db');  //need to finish Part 1 to get this to work
+const { client } = require('./db'); 
+require('dotenv').config();
 
 server.use(bodyParser.json());
 
 server.use(morgan('dev'));
 
-// client.connect();  //need to finish Part 1 to get this to work
+client.connect();
 
 server.listen(PORT, () => {
     console.log('The server is up on port', PORT)
